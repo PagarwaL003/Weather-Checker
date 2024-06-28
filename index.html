@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/Gartoon-Team-Gartoon-Weather-Weather-clouds-sun.512.png">
+</head>
+<body>
+    <div class="wrapper">
+
+        <h2>WEATHER</h2>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+            
+            <!-- grant location container -->
+            <div class="sub-container grant-location-container">
+                <img src="assets/icons8-location-100.png" alt="PinPoint" height="80px" width="80px" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access to Get Weather Information</p>
+                <button class="btn"  data-grantAccess>Allow</button>
+            </div>
+
+            <!-- search form -->
+
+            <form class="form-container" data-searchForm>
+                <input type="text" placeholder="Search for City..." id="myInput" data-searchInput>
+                <button class="btnform" type="submit" ><img src="assets/icons8-search-64.png" alt="search" height="20px" width="20px" loading="lazy"></button>
+            </form>
+
+
+            <!-- loading screen -->
+            <div class="sub-container loading-container">
+                <img src="assets/Pulse@1.4249999523162842x-1.0s-200px-200px.gif" alt="loading" height="100" width="100">
+                <p>Loading</p>
+            </div>
+            
+            <!--weather info  -->
+            <div class="sub-container user-info-container">
+
+                <!-- city name and flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- weather description -->
+                <p class="desc" data-weatherDesc></p>
+
+                <!-- weather icon -->
+                <img class="weather" data-weatherIcon>
+
+                <!-- temperature -->
+                <p class="temp" data-temp></p>
+
+                <!-- 3 cards  Parameters-->
+                <div class="parameter-container">
+                <!-- card 1 -->
+                <div class="parameter">
+                    <img src="assets/icons8-wind-40.png" alt="Windspeed">
+                    <p>Windspeed</p>
+                    <p data-windspeed></p>
+                </div>
+
+                <!-- card 2 -->
+                <div class="parameter">
+                    <img src="assets/icons8-humidity-48.png" alt="Humidity">
+                    <p>Humidity</p>
+                    <p data-humidity></p>
+                </div>
+
+                <!-- card 3 -->
+                <div class="parameter">
+                    <img src="assets/icons8-cloud-40.png" alt="Cloud">
+                    <p>Clouds</p>
+                    <p data-cloud></p>
+                </div>
+            </div>
+            
+            </div>
+
+            <!-- error -->
+            <div class="error-container">
+                <img src="assets/error.png" alt="Error">
+                <p>Location Not Found !</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
